@@ -9,6 +9,7 @@ const links = [
   { to: "/services", label: "الخدمات والأسعار" },
   { to: "/about", label: "عن المعمل" },
   { to: "/my-bookings", label: "مواعيدي" },
+  { to: "/admin", label: "لوحة التحكم" },
 ];
 
 export default function Navbar() {

@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Booking from "./pages/Booking";
 import MyBookings from "./pages/MyBookings";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import { BookingProvider } from "./context/BookingContext";
 
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/my-bookings" element={<MyBookings />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>

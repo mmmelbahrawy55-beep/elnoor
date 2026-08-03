@@ -49,9 +49,28 @@ export const BookingProvider = ({ children }) => {
     [bookings]
   );
 
+  const updateBookingStatus = (id, status) => {
+    setBookings((prev) => prev.map((b) => (b.id === id ? { ...b, status } : b)));
+  };
+
+  const allBookings = useMemo(
+    () => [...bookings].sort((a, b) => b.createdAt - a.createdAt),
+    [bookings]
+  );
+
+  const adminStats = useMemo(() => {
+    const total = bookings.length;
+    const confirmed = bookings.filter((b) => b.status === "confirmed").length;
+    const completed = bookings.filter((b) => b.status === "completed").length;
+    const cancelled = bookings.filter((b) => b.status === "cancelled").length;
+    const today = dateKey(new Date());
+    const todayBookings = bookings.filter((b) => b.dateKey === today && b.status !== "cancelled").length;
+    return { total, confirmed, completed, cancelled, todayBookings };
+  }, [bookings]);
+
   return (
     <BookingContext.Provider
-      value={{ bookings, addBooking, cancelBooking, bookingsFor, slotUsage, myBookings }}
+      value={{ bookings, addBooking, cancelBooking, bookingsFor, slotUsage, myBookings, allBookings, updateBookingStatus, adminStats }}
     >
       {children}
     </BookingContext.Provider>
