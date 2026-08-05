@@ -67,26 +67,26 @@ export default function About() {
                 <Sparkles className="w-4 h-4" />
                 قصة معمل النور
               </span>
-              <h1 className="mt-6 text-3xl md:text-5xl font-black text-white leading-[1.15]">
+              <h1 className="mt-6 text-2xl md:text-4xl lg:text-5xl font-black text-white leading-[1.4]">
                 ربع قرن من
-                <span className="block text-gold-shine">الدقة والثقة</span>
-                في خدمة صحتكم
+                <span className="block text-gold-shine mt-2">الدقة والثقة</span>
+                <span className="block mt-2">في خدمة صحتكم</span>
               </h1>
-              <p className="mt-6 text-lg text-slate-300/90 leading-relaxed">
+              <p className="mt-6 text-base md:text-lg text-slate-300/90 leading-loose">
                 بدأ معمل النور رحلته عام 2001 من معمل صغير في وسط البلد، واليوم أصبح أحد أكبر
                 وأحدث معامل التحاليل الطبية بثلاثة فروع، يخدم أكثر من 120 ألف مريض سنوياً بجودة
                 عالمية وبأسعار مناسبة.
               </p>
             </Reveal>
-            <Reveal delay={0.2} className="mt-8 grid grid-cols-3 gap-4 max-w-md">
+            <Reveal delay={0.2} className="mt-10 grid grid-cols-3 gap-5 max-w-md">
               {[
                 ["2001", "عام التأسيس"],
                 ["3", "فروع"],
                 ["120K+", "عميل سنوياً"],
               ].map(([v, l]) => (
-                <div key={l} className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-4 text-center">
-                  <p className="text-2xl font-black text-gold" dir="ltr">{v}</p>
-                  <p className="mt-1 text-xs text-slate-400 font-bold">{l}</p>
+                <div key={l} className="rounded-2xl bg-white/5 ring-1 ring-white/10 p-5 text-center">
+                  <p className="text-2xl md:text-3xl font-black text-gold" dir="ltr">{v}</p>
+                  <p className="mt-2 text-xs text-slate-400 font-bold">{l}</p>
                 </div>
               ))}
             </Reveal>
@@ -167,10 +167,10 @@ export default function About() {
                 <ShieldCheck className="w-4 h-4" />
                 اعتماداتنا
               </span>
-              <h2 className="mt-5 text-3xl md:text-4xl font-black text-navy-900 leading-[1.2]">
+              <h2 className="mt-5 text-2xl md:text-3xl lg:text-4xl font-black text-navy-900 leading-[1.3]">
                 جودة معتمدة دولياً على كل نتائجنا
               </h2>
-              <p className="mt-4 text-slate-500 leading-relaxed">
+              <p className="mt-5 text-base text-slate-500 leading-loose">
                 نشارك في برامج ضبط الجودة الخارجية (RIQAS و CAP) ونطبق معيار ISO 15189، لضمان أن كل
                 تقرير يصدر من معملنا يلبي أعلى المعايير العالمية.
               </p>
